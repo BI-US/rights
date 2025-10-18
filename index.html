@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BI-US · Derechos & Licencias</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Serif+4:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#9b59ff;
+      --glass: rgba(255,255,255,0.03);
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color: #e6eef6;
+    }
+    body{background:linear-gradient(180deg,#071226 0%,#0f1b2a 100%);margin:0;min-height:100vh}
+    .wrap{max-width:980px;margin:36px auto;padding:28px;background:var(--glass);border-radius:14px;box-shadow:0 10px 30px rgba(2,6,23,.6)}
+    header{display:flex;gap:16px;align-items:center}
+    .logo{width:68px;height:68px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#4ac0ff);display:flex;align-items:center;justify-content:center;font-weight:700}
+    h1{margin:0;font-size:22px}
+    p.lead{margin:6px 0 18px;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px;margin-top:18px}
+    .card{background:rgba(255,255,255,0.02);padding:18px;border-radius:10px}
+    .muted{color:var(--muted);font-size:13px}
+    .section-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+    .btn{display:inline-block;background:var(--accent);color:#071226;padding:8px 12px;border-radius:8px;font-weight:600;text-decoration:none}
+    pre{white-space:pre-wrap;background:#071024;padding:12px;border-radius:8px;color:#cfe6ff;font-size:13px}
+    ul{padding-left:18px}
+    .small{font-size:13px;color:var(--muted)}
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+    /* responsive */
+    @media (max-width:880px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <main class="wrap" role="main">
+    <header>
+      <div class="logo">BI-US</div>
+      <div>
+        <h1>BI-US — Derechos & Legalidades</h1>
+        <p class="lead">Repositorio de cláusulas, contratos y avisos legales para proyectos BI-US. Autor: <strong>Óscar Cruz Díaz</strong> (RFC: CUDO000714Q61)</p>
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- main content -->
+      <section class="card">
+        <div class="section-title">
+          <h2 style="margin:0;font-size:18px">Aviso legal — licencia</h2>
+          <span class="small">Estado actual: <strong id="licenseState">MIT</strong></span>
+        </div>
+
+        <p class="muted">Nota: este repositorio muestra material legal y plantillas. Si quieres exigir "Todos los derechos reservados" cambia <code>LICENSE</code> por tu texto propietario y añade evidencia (commits firmados, release ZIP).</p>
+
+        <h3 style="font-size:15px;margin-top:14px">Cláusula resumen (lista rápida)</h3>
+        <ul>
+          <li>Propiedad intelectual: <strong>Óscar Cruz Díaz</strong> (RFC: CUDO000714Q61).</li>
+          <li>Uso: prohibido sin autorización escrita y contrato firmado.</li>
+          <li>Prohibiciones específicas: Universidad Politécnica de Tlaxcala y Tiendas 3B requieren permiso explícito.</li>
+          <li>Reconocimiento: se reconoce asistencia de IA (OpenAI ChatGPT) sin transferencia de autoría.</li>
+        </ul>
+
+        <h3 style="font-size:15px;margin-top:12px">Documentos disponibles</h3>
+        <ul>
+          <li><strong>LICENSE</strong> — plantilla "All rights reserved".</li>
+          <li><strong>CONTRATO_LICENCIA_COMERCIAL.md</strong> — contrato base para venta/licenciamiento.</li>
+          <li><strong>CRONOLOGIA.md</strong> — plantillas para 15 semanas / evidencia.</li>
+        </ul>
+
+        <div style="margin-top:12px">
+          <a href="#contrato" class="btn" onclick="showSection('contrato')">Ver contrato</a>
+          <a href="#cronologia" class="btn" style="margin-left:8px" onclick="showSection('cronologia')">Ver cronología</a>
+          <a href="#" class="btn" style="margin-left:8px" id="downloadZip">Descargar ZIP</a>
+        </div>
+
+        <hr style="margin:12px 0;border:none;border-top:1px solid rgba(255,255,255,0.04)">
+
+        <div id="contrato" style="display:none">
+          <h3>Contrato de licencia — (resumen)</h3>
+          <pre>
+- Firma y pago previos a entrega
+- Tarifas: por tienda / por implementación / por hora
+- Prohibición de sublicenciar
+- Penalizaciones por uso no autorizado
+- Jurisdicción: México
+          </pre>
+          <p class="small">Si quieres, puedo generar un PDF listo para firma y lo enlazamos aquí.</p>
+        </div>
+
+        <div id="cronologia" style="display:none;margin-top:8px">
+          <h3>Cronología — ejemplo (usa CRONOLOGIA.md para detalle)</h3>
+          <p class="muted small">Incluye fechas, horas reales y evidencias (commits, capturas, videos).</p>
+          <pre>
+Semana 1: Planificación — 34 h — (diagrama arquitectura)
+Semana 2: HTML base — 34 h — (commits)
+...
+Semana 15: Soporte y cierre — 30 h
+Total sugerido: 500 h
+          </pre>
+        </div>
+      </section>
+
+      <!-- sidebar -->
+      <aside class="card">
+        <h3 style="margin-top:0">Contacto & descarga</h3>
+        <p class="muted small">Correo para licencias y contacto formal:</p>
+        <p style="word-break:break-word"><strong id="contactEmail">tu_correo@example.com</strong></p>
+        <button class="btn" onclick="copyEmail()">Copiar correo</button>
+
+        <hr style="margin:12px 0;border:none;border-top:1px solid rgba(255,255,255,0.04)">
+
+        <h4 style="margin:6px 0">Acciones rápidas</h4>
+        <ul class="small">
+          <li>Publicar en GitHub Pages desde <code>/docs</code> (Settings → Pages → Source → main / docs). :contentReference[oaicite:2]{index=2}</li>
+          <li>Si quieres cambiar la licencia: editar <code>LICENSE</code> a "All rights reserved" (archivo personalizado).</li>
+          <li>Agregar release firmado y ZIP (evidencia legal).</li>
+        </ul>
+      </aside>
+    </div>
+
+    <footer>
+      © 2025 Óscar Cruz Díaz — BI-US · Derechos reservados (resumen).  
+      <div class="muted" style="margin-top:6px">Sugerencia: usa la carpeta <code>/docs</code> y activa GitHub Pages para publicar esta página. :contentReference[oaicite:3]{index=3}</div>
+    </footer>
+  </main>
+
+  <script>
+    function showSection(id){
+      const el = document.getElementById(id);
+      if(!el) return;
+      el.style.display = (el.style.display==='none') ? 'block' : 'none';
+      el.scrollIntoView({behavior:'smooth', block:'center'});
+    }
+    function copyEmail(){
+      const email = document.getElementById('contactEmail').textContent;
+      navigator.clipboard?.writeText(email).then(()=> alert('Correo copiado: '+email));
+    }
+    // small init: set download link placeholder (replace with your release asset)
+    document.getElementById('downloadZip').href = '#';
+    // Fill license state from server? Here it's static; change if you edit LICENSE
+    // If you want, puedo inyectar dinámicamente el valor leyendo la API de GitHub.
+  </script>
+</body>
+</html>
