@@ -1,0 +1,2 @@
+# rights
+DERECHO y legalidades. 
